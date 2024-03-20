@@ -7,12 +7,23 @@
 
     <fragment
         android:id="@+id/firstFragment"
-        android:name="com.example.youtube_parcer.ui.FirstFragment"
+        android:name="com.example.youtube_parcer.presentation.fragments.FirstFragment"
         android:label="fragment_first"
-        tools:layout="@layout/fragment_first" />
+        tools:layout="@layout/fragment_first" >
+        <action
+            android:id="@+id/action_firstFragment_to_secondFragment"
+            app:destination="@id/secondFragment" />
+    </fragment>
     <fragment
         android:id="@+id/secondFragment"
-        android:name="com.example.youtube_parcer.ui.SecondFragment"
+        android:name="com.example.youtube_parcer.presentation.fragments.SecondFragment"
         android:label="fragment_second"
-        tools:layout="@layout/fragment_second" />
+        tools:layout="@layout/fragment_second" >
+        <argument
+            android:name="id"
+            app:argType="string" />
+        <argument
+            android:name="title"
+            app:argType="string" />
+    </fragment>
 </navigation>
